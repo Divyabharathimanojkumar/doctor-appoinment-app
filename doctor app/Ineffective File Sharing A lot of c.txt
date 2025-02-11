@@ -1,0 +1,4 @@
+Ineffective File Sharing: A lot of current platforms don't have preview features, controlled access, or easy file management.
+Security and privacy concerns: Sensitive information may be made available to unauthorized users through conventional file-sharing techniques (email attachments, public URLs).
+Absence of Progress Feedback: When users upload or download files, they frequently feel uncertain because there are no progress indications shown.
+Restricted Access Control: Users require a mechanism to manage file access (role-based, public/private rights).

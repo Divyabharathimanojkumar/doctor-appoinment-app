@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Appointment App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Fullscreen Container -->
+  <div class="app-container">
+    <!-- Login Screen -->
+    <section id="login" class="screen">
+      <div class="content">
+        <h1 class="app-title">Cyber Clinic</h1>
+        <p class="tagline">Your Health, Our Priority!</p>
+        <form>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+
+          <button class="btn" onclick="navigateTo('welcome')">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" class="link" onclick="navigateTo('personal-details')">Sign up</a></p>
+      </div>
+    </section>
+
+    <!-- Welcome Screen -->
+    <section id="welcome" class="screen hidden">
+      <div class="content">
+        <h1 class="app-title">Welcome to Cyber Clinic</h1>
+        <p>Access our premium health services at your fingertips!</p>
+        <button class="btn" onclick="navigateTo('personal-details')">Get Started</button>
+      </div>
+    </section>
+
+    <!-- Personal Details Screen -->
+    <section id="personal-details" class="screen hidden">
+      <div class="content">
+        <h2>Personal Details</h2>
+        <form>
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" placeholder="Enter your first name" required>
+
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" placeholder="Enter your last name" required>
+
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" required>
+
+          <label>Gender</label>
+          <div class="gender-options">
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female" required> Female</label>
+            <label><input type="radio" name="gender" value="non-binary"> Non-Binary</label>
+          </div>
+
+          <button class="btn" onclick="navigateTo('dashboard')">Next</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Dashboard Screen -->
+    <section id="dashboard" class="screen hidden">
+      <div class="content">
+        <h2>Dashboard</h2>
+        <div class="options-grid">
+          <div class="option" onclick="navigateTo('specialties')">Specialties</div>
+          <div class="option" onclick="navigateTo('hospitals')">Nearby Hospitals</div>
+          <div class="option" onclick="navigateTo('history')">Call History</div>
+          <div class="option" onclick="navigateTo('contacts')">Emergency Contacts</div>
+          <div class="option" onclick="navigateTo('location')">My Location</div>
+          <div class="option" onclick="navigateTo('consultation')">Online Consultation</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specialties Screen -->
+    <section id="specialties" class="screen hidden">
+      <div class="content">
+        <h2>Specialties</h2>
+        <div class="specialties-grid">
+          <div class="specialty">Cardiologist</div>
+          <div class="specialty">Dermatologist</div>
+          <div class="specialty">Pediatrician</div>
+          <div class="specialty">Neurologist</div>
+          <div class="specialty">Gastroenterologist</div>
+          <div class="specialty">Psychiatrist</div>
+        </div>
+        <button class="btn" onclick="navigateTo('dashboard')">Back to Dashboard</button>
+      </div>
+    </section>
+
+    <!-- Nearby Hospitals Screen -->
+    <section id="hospitals" class="screen hidden">
+      <div class="content">
+        <h2>Nearby Hospitals</h2>
+        <ul>
+          <li>City Hospital - 2.5 km</li>
+          <li>Grace Medical Center - 3.1 km</li>
+          <li>St. John's Clinic - 4.8 km</li>
+        </ul>
+        <button class="btn" onclick="navigateTo('dashboard')">Back to Dashboard</button>
+      </div>
+    </section>
+
+    <!-- Call History Screen -->
+    <section id="history" class="screen hidden">
+      <div class="content">
+        <h2>Call History</h2>
+        <ul>
+          <li>Dr. John Doe - Cardiologist (5 min ago)</li>
+          <li>Dr. Jane Smith - Neurologist (1 day ago)</li>
+        </ul>
+        <button class="btn" onclick="navigateTo('dashboard')">Back to Dashboard</button>
+      </div>
+    </section>
+
+    <!-- Emergency Contacts Screen -->
+    <section id="contacts" class="screen hidden">
+      <div class="content">
+        <h2>Emergency Contacts</h2>
+        <ul>
+          <li>Ambulance - 911</li>
+          <li>City Hospital - +1 234 567 890</li>
+        </ul>
+        <button class="btn" onclick="navigateTo('dashboard')">Back to Dashboard</button>
+      </div>
+    </section>
+
+    <!-- Location Screen -->
+    <section id="location" class="screen hidden">
+      <div class="content">
+        <h2>My Location</h2>
+        <p>Fetching your current location...</p>
+        <button class="btn" onclick="navigateTo('dashboard')">Back to Dashboard</button>
+      </div>
+    </section>
+
+    <!-- Online Consultation Screen -->
+    <section id="consultation" class="screen hidden">
+      <div class="content">
+        <h2>Online Consultation</h2>
+        <div class="consultation-list">
+          <p>Join a video consultation with your doctor.</p>
+          <button class="btn">Start Video Call</button>
+        </div>
+        <button class="btn" onclick="navigateTo('dashboard')">Back to Dashboard</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- JavaScript for Navigation -->
+  <script>
+    function navigateTo(sectionId) {
+      const screens = document.querySelectorAll('.screen');
+      screens.forEach(screen => screen.classList.add('hidden'));
+      document.getElementById(sectionId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

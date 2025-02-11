@@ -1,0 +1,232 @@
+
+  
+  /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  #login {
+    background-image: url('login\ page\ image'); /* Replace with your background image */
+  }
+  /* App Container */
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Screen Styles */
+  .screen {
+    display: none;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+  }
+  
+  .screen.hidden {
+    display: none;
+  }
+  
+  .screen:not(.hidden) {
+    display: block;
+  }
+  
+  /* Content */
+  .content {
+    text-align: center;
+  }
+  
+  .app-title {
+    font-size: 2.5em;
+    color: #6a0dad; /* Purple color */
+    margin-bottom: 10px;
+  }
+  
+  .tagline {
+    font-size: 1.2em;
+    color: #6a0dad;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Elements */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #6a0dad; /* Purple color */
+  }
+  
+  input {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 15px;
+    border: 2px solid #6a0dad;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  input[type="email"], input[type="password"], input[type="text"], input[type="date"] {
+    background-color: #fff;
+    outline: none;
+  }
+  
+  input:focus {
+    border-color: #8a2be2; /* Light purple focus */
+  }
+  
+  /* Buttons */
+  .btn {
+    background-color: #6a0dad; /* Purple color */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 80%;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #8a2be2; /* Lighter purple on hover */
+  }
+  
+  .btn:active {
+    background-color: #5a0a8c; /* Darker purple when clicked */
+  }
+  
+  /* Links */
+  .link {
+    color: #6a0dad;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Options Grid */
+  .options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .option {
+    background-color: #6a0dad; /* Purple background */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+  }
+  
+  .option:hover {
+    background-color: #8a2be2; /* Lighter purple on hover */
+  }
+  
+  .option:active {
+    background-color: #5a0a8c; /* Darker purple on click */
+  }
+  
+  /* Gender Options */
+  .gender-options label {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1em;
+    color: #6a0dad; /* Purple color */
+  }
+  
+  .gender-options input {
+    margin-right: 5px;
+  }
+  
+  /* Specialties Grid */
+  .specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .specialty {
+    background-color: #6a0dad; /* Purple background */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .specialty:hover {
+    background-color: #8a2be2; /* Lighter purple on hover */
+  }
+  
+  .specialty:active {
+    background-color: #5a0a8c; /* Darker purple on click */
+  }
+  
+  /* Back to Dashboard Button */
+  button[type="button"].btn {
+    background-color: #5a0a8c; /* Darker purple */
+    margin-top: 20px;
+  }
+  
+  button[type="button"].btn:hover {
+    background-color: #8a2be2;
+  }
+  
+  button[type="button"].btn:active {
+    background-color: #3b0652;
+  }
+  
+  /* Loading Spinner (for Location) */
+  .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #6a0dad; /* Purple spinner */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .options-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .specialties-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .specialty, .option {
+      font-size: 1em;
+    }
+  
+    .btn {
+      font-size: 1em;
+    }
+  }
+  

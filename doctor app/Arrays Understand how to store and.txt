@@ -1,0 +1,6 @@
+Arrays: Understand how to store and access elements at fixed indices, their advantages for sequential access, and limitations in dynamic operations. 
+Linked Lists: Grasp the concept of nodes containing data and pointers to the next node, allowing for flexible insertion and deletion at any position. 
+Stacks: Learn the "Last In First Out" (LIFO) principle, common operations like push and pop, and applications like function calls. 
+Queues: Understand the "First In First Out" (FIFO) principle, operations like enqueue and dequeue, and uses in waiting lines. 
+Trees: Explore the hierarchical structure, concepts like nodes, parents, children, and traversal methods (in-order, pre-order, post-order). 
+Graphs: Grasp the representation of nodes and edges, different traversal algorithms (DFS, BFS), and applications like social networks. 
